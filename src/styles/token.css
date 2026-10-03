@@ -1,0 +1,54 @@
+/*
+ * Design tokens — Figma variables export (../variables.json, v1.0.4) 기준.
+ * 이름은 Figma 변수명을 그대로 따른다: "content/high" → --content-high
+ */
+
+:root {
+  /* ── Color · huddling / Mode 1 ───────────────────────── */
+  --bg: #101010;
+
+  --content-highest: #ffffff;
+  --content-high: #ffffffcc; /* white 80% */
+  --content-medium: #ffffffa6; /* white 65% */
+  --content-low: #ffffff66; /* white 40% */
+
+  --brand-primary: #0e72e4;
+  --brand-on-primary: #ffffff;
+
+  /* ── Typography · Style ──────────────────────────────── */
+  --font-family-pretendard: 'Pretendard Variable', Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+
+  /* heading-48-sb */
+  --heading-48-sb-font-size: 48px;
+  --heading-48-sb-line-height: 1.2;
+  --heading-48-sb-font-weight: var(--font-weight-semibold);
+  --heading-48-sb-letter-spacing: 0;
+
+  /* heading-36-sb */
+  --heading-36-sb-font-size: 36px;
+  --heading-36-sb-line-height: 1.2;
+  --heading-36-sb-font-weight: var(--font-weight-semibold);
+  --heading-36-sb-letter-spacing: 0;
+
+  /* heading-30-sb */
+  --heading-30-sb-font-size: 30px;
+  --heading-30-sb-line-height: 1.2;
+  --heading-30-sb-font-weight: var(--font-weight-semibold);
+  --heading-30-sb-letter-spacing: 0;
+
+  /* heading-20-sb */
+  --heading-20-sb-font-size: 20px;
+  --heading-20-sb-line-height: 1.2;
+  --heading-20-sb-font-weight: var(--font-weight-semibold);
+  --heading-20-sb-letter-spacing: 0;
+
+  /* body-16-m */
+  --body-16-m-font-size: 16px;
+  --body-16-m-line-height: 1.5;
+  --body-16-m-font-weight: var(--font-weight-medium);
+  --body-16-m-letter-spacing: 0;
+}

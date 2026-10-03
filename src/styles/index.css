@@ -1,0 +1,75 @@
+@import 'tailwindcss';
+@import './token.css';
+
+/*
+ * token.css 의 변수를 Tailwind 유틸리티로 연결한다 (값은 token.css 한 곳에서만 관리).
+ * 예: --color-brand-primary → bg-brand-primary, --text-heading-48-sb → text-heading-48-sb
+ */
+@theme {
+  /* Breakpoints — Figma 프레임: mobile 393 / tablet 768 / desktop 1440 */
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1440px;
+}
+
+@theme inline {
+  --font-sans: var(--font-family-pretendard);
+
+  /* Colors */
+  --color-bg: var(--bg);
+  --color-content-highest: var(--content-highest);
+  --color-content-high: var(--content-high);
+  --color-content-medium: var(--content-medium);
+  --color-content-low: var(--content-low);
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-on-primary: var(--brand-on-primary);
+
+  /* Typography */
+  --text-heading-48-sb: var(--heading-48-sb-font-size);
+  --text-heading-48-sb--line-height: var(--heading-48-sb-line-height);
+  --text-heading-48-sb--font-weight: var(--heading-48-sb-font-weight);
+  --text-heading-48-sb--letter-spacing: var(--heading-48-sb-letter-spacing);
+
+  --text-heading-36-sb: var(--heading-36-sb-font-size);
+  --text-heading-36-sb--line-height: var(--heading-36-sb-line-height);
+  --text-heading-36-sb--font-weight: var(--heading-36-sb-font-weight);
+  --text-heading-36-sb--letter-spacing: var(--heading-36-sb-letter-spacing);
+
+  --text-heading-30-sb: var(--heading-30-sb-font-size);
+  --text-heading-30-sb--line-height: var(--heading-30-sb-line-height);
+  --text-heading-30-sb--font-weight: var(--heading-30-sb-font-weight);
+  --text-heading-30-sb--letter-spacing: var(--heading-30-sb-letter-spacing);
+
+  --text-heading-20-sb: var(--heading-20-sb-font-size);
+  --text-heading-20-sb--line-height: var(--heading-20-sb-line-height);
+  --text-heading-20-sb--font-weight: var(--heading-20-sb-font-weight);
+  --text-heading-20-sb--letter-spacing: var(--heading-20-sb-letter-spacing);
+
+  --text-body-16-m: var(--body-16-m-font-size);
+  --text-body-16-m--line-height: var(--body-16-m-line-height);
+  --text-body-16-m--font-weight: var(--body-16-m-font-weight);
+  --text-body-16-m--letter-spacing: var(--body-16-m-letter-spacing);
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    /*
+     * Figma 와 동일한 글자 두께 렌더링.
+     * macOS 브라우저 기본값(subpixel)은 Figma(grayscale) 보다 글자를 두껍게 그린다.
+     */
+    -webkit-font-smoothing: antialiased; /* Chrome · Safari · Edge (macOS) */
+    -moz-osx-font-smoothing: grayscale; /* Firefox (macOS) */
+    text-rendering: optimizeLegibility;
+    font-synthesis: none; /* 없는 굵기를 브라우저가 가짜 볼드로 합성하지 않도록 */
+  }
+  body {
+    @apply bg-bg text-content-highest font-sans;
+    word-break: keep-all;
+  }
+  img,
+  svg,
+  video {
+    display: block;
+  }
+}
